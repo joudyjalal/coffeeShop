@@ -15,31 +15,29 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="min-h-screen bg-page-bg text-text-primary flex flex-col justify-between">
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Navbar />
-              <main className="flex-grow">
-                <Hero />
-                <Categories />
-                <Products />
-                <Desserts />
-                <Banner />
-                <Customers />
-                <Newsletter />
-              </main>
-              <Footer />
-            </>
-          }
-        />
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar />
+            <main className="flex-grow">
+              <Hero />
+              <Categories />
+              <Products />
+              <Desserts />
+              <Banner />
+              <Customers />
+              <Newsletter />
+            </main>
+            <Footer />
+          </>
+        }
+      />
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </div>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
   );
 }
 

@@ -38,15 +38,14 @@ export default function Login() {
     }
 
     setSuccessMsg("Login successful! Welcome back ☕");
-    
-    
+
     setTimeout(() => {
       navigate("/");
     }, 1000);
   };
 
   return (
-    <div className="flex justify-center items-center min-h-[80vh] bg-stone-50 px-4">
+    <div className="flex justify-center items-center min-h-[80vh] bg-white px-4">
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-md border border-stone-200">
         <h2 className="text-2xl font-serif font-bold text-[#5c2d18] mb-6 text-center tracking-wider">
           Sign In - Coffee
