@@ -7,23 +7,38 @@ import Desserts from "./components/Desserts";
 import Banner from "./components/Banner";
 import Customers from "./components/Customers";
 import Newsletter from "./components/Newsletter";
+
 import Footer from "./layouts/Footer";
-import { useState } from "react";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
+import { Routes, Route } from "react-router-dom";
+
 function App() {
-  const [searchQuery, setSearchQuery] = useState("");
   return (
-    <div className="min-h-screen bg-page-bg text-text-primary">
-      <Navbar />
-      <main>
-        <Hero />
-        <Categories />
-        <Products />
-        <Desserts />
-        <Banner />
-        <Customers />
-        <Newsletter />
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-page-bg text-text-primary flex flex-col justify-between">
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <main className="flex-grow">
+                <Hero />
+                <Categories />
+                <Products />
+                <Desserts />
+                <Banner />
+                <Customers />
+                <Newsletter />
+              </main>
+              <Footer />
+            </>
+          }
+        />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </div>
   );
 }
