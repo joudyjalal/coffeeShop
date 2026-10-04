@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema } from "./authSchemas";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function Login({ onLoginSuccess }) {
+export default function Login() {
   const [successMsg, setSuccessMsg] = useState("");
   const [authError, setAuthError] = useState("");
   const navigate = useNavigate();
@@ -38,10 +38,11 @@ export default function Login({ onLoginSuccess }) {
     }
 
     setSuccessMsg("Login successful! Welcome back ☕");
-    if (onLoginSuccess) {
-      onLoginSuccess({ email: data.email });
-    }
-    navigate("/");
+    
+    
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
   };
 
   return (
