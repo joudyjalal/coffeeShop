@@ -20,30 +20,24 @@ export default function Login() {
 
   const onSubmit = (data) => {
     setAuthError("");
-    setSuccessMsg("");
 
-    const savedUser = JSON.parse(localStorage.getItem("user"));
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    if (!savedUser) {
-      setAuthError("No account found with this email. Please sign up first.");
+    const foundUser = users.find((u) => u.email === data.email);
+
+    if (!foundUser) {
+      setAuthError("This email is not registered. Please sign up first!");
       return;
     }
 
-    if (
-      savedUser.email !== data.email ||
-      savedUser.password !== data.password
-    ) {
-      setAuthError("Incorrect email or password.");
+    if (foundUser.password !== data.password) {
+      setAuthError("Incorrect password. Please try again.");
       return;
     }
 
-    setSuccessMsg("Login successful! Welcome back ☕");
-
-    setTimeout(() => {
-      navigate("/");
-    }, 1000);
+    localStorage.setItem("currentUser", JSON.stringify(foundUser));
+    navigate("/");
   };
-
   return (
     <div className="flex justify-center items-center min-h-[80vh] bg-white px-4">
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-md border border-stone-200">
