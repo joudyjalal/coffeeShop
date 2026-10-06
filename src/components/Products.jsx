@@ -15,7 +15,7 @@ const productsData = [
     id: 1,
     title: "Lungo coffee",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "Rich espresso with velvety foam, perfectly balanced for your daily routine",
     price: "Rs. 200",
     image: coffee1,
     isLiked: false,
@@ -24,7 +24,7 @@ const productsData = [
     id: 2,
     title: "Lungo coffee",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "Pure, bold, and intensely aromatic for a deep, authentic coffee experience",
     price: "Rs. 200",
     image: coffee2,
     isLiked: false,
@@ -32,8 +32,8 @@ const productsData = [
   {
     id: 3,
     title: "Lungo coffee",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    description:"Smooth and creamy, crafted with love and expert brewing to brighten your day"
+     ,
     price: "Rs. 200",
     image: coffee3,
     isLiked: false,
@@ -42,7 +42,7 @@ const productsData = [
     id: 4,
     title: "Lungo coffee",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+     "Dark roast perfection with a warm, comforting finish in every single sip",
     price: "Rs. 200",
     image: coffee4,
     isLiked: false,

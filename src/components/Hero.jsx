@@ -1,6 +1,23 @@
 import heroBg from "../assets/coffe.png";
-
+import { useNavigate } from "react-router-dom";
 export default function Hero() {
+const navigate = useNavigate();
+
+  const handleOrderClick = () => {
+  
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (!currentUser) {
+     
+      navigate("/login");
+    } else {
+      
+      const coffeeSection = document.getElementById("coffee");
+      if (coffeeSection) {
+        coffeeSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   return (
     <section
       id="home"
@@ -18,12 +35,12 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-300 text-sm max-w-sm font-light leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor
+            Crafted with passion, brewed to perfection experience the true taste
+            of coffee every day
           </p>
 
           <div className="pt-4">
-            <button className="bg-white text-black px-8 py-3 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors cursor-pointer shadow-md">
+            <button className="bg-white text-black px-8 py-3 rounded-full font-medium text-sm hover:bg-gray-200 transition-colors cursor-pointer shadow-md" onClick={handleOrderClick}>
               Order Now
             </button>
           </div>
