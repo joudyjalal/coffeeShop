@@ -15,9 +15,8 @@ export default function Banner() {
       id="banner"
       className="bg-category-bg py-12 px-6 md:px-12 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative">
-     
-        <div className="w-full lg:w-1/3 flex justify-center lg:justify-start order-2 lg:order-1">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative">
+        <div className="w-full md:w-1/3 flex justify-center md:justify-start">
           <img
             src={beansLeft}
             alt="Hand picking coffee beans"
@@ -25,8 +24,7 @@ export default function Banner() {
           />
         </div>
 
-        
-        <div className="text-center lg:text-left space-y-6 z-10 max-w-md order-1 lg:order-2">
+        <div className="text-center space-y-6 z-10 max-w-md">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-text-primary leading-tight">
             Check Out Our Best <br /> Coffee Beans
           </h2>
@@ -42,8 +40,7 @@ export default function Banner() {
           </div>
         </div>
 
-        
-        <div className="w-full lg:w-1/3 flex justify-center lg:justify-end order-3">
+        <div className="w-full md:w-1/3 flex justify-center md:justify-end">
           <img
             src={beansRight}
             alt="Coffee beans scattered"
