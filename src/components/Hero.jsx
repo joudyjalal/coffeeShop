@@ -1,4 +1,4 @@
-import heroBg from "../assets/coffe.png";
+import heroBg from "../assets/coffe.jpg";
 import { useNavigate } from "react-router-dom";
 export default function Hero() {
 const navigate = useNavigate();
