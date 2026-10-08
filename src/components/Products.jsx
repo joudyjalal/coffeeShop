@@ -81,13 +81,13 @@ export default function Products() {
   };
 
   return (
-    <section id="coffee" className="bg-[#f1f0ee] py-16 px-6 md:px-12 relative">
+    <section id="coffee" className="bg-[#f1f0ee] py-16 px-4 sm:px-6 md:px-12 relative">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center font-serif text-2xl md:text-3xl font-bold tracking-widest text-[#1C1817] uppercase mb-12">
+        <h2 className="text-center font-serif text-xl sm:text-2xl md:text-3xl font-bold tracking-widest text-[#1C1817] uppercase mb-12">
           OUR SPECIAL COFFEE
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full px-0 sm:px-4">
           {products.map((product) => (
             <div
               key={product.id}
@@ -136,15 +136,14 @@ export default function Products() {
           ))}
         </div>
 
-       
-   {orderedProduct && (
+       {orderedProduct && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
             <div className="bg-[#eeebe6] text-[#1C1817] p-6 md:p-8 rounded-2xl shadow-xl max-w-sm w-full text-center space-y-4 border border-[#e2d9c8]">
               <h3 className="font-serif text-xl font-bold tracking-wide">
                 Order Placed Successfully!
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Thank you! Your order for  has been received and will be prepared soon.
+                Thank you! Your order for {orderedProduct} has been received and will be prepared soon.
               </p>
               <button
                 onClick={() => setOrderedProduct(null)}

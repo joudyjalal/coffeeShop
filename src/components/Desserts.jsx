@@ -79,16 +79,16 @@ export default function Desserts() {
   };
 
   return (
-    <section id="dessert" className="bg-[#f1f0ee] py-16 px-6 md:px-12 relative">
+    <section id="dessert" className="bg-[#f1f0ee] py-16 px-4 sm:px-6 md:px-12 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold tracking-widest text-[#1C1817] uppercase">
+          <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold tracking-widest text-[#1C1817] uppercase">
             OUR SPECIAL DESSERT
           </h2>
         </div>
 
         <div className="flex items-center justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full px-0 sm:px-4">
             {desserts.map((item) => (
               <div
                 key={item.id}

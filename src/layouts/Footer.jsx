@@ -61,21 +61,21 @@ export default function Footer() {
               <a href="#about">About us</a>
             </li>
             <li>
-              <a href="#story">Out story</a>
+              <a href="#story">Our story</a>
             </li>
           </ul>
         </div>
 
         <div className="space-y-3">
           <h3 className="font-serif text-sm tracking-wider uppercase text-white">
-            INFOTNATION
+            INFORMATION
           </h3>
           <ul className="space-y-2 text-white font-light">
             <li>
-              <a href="#plans">Plons & pricing</a>
+              <a href="#plans">Plans & pricing</a>
             </li>
             <li>
-              <a href="#sell">Sell your prodcts</a>
+              <a href="#sell">Sell your products</a>
             </li>
             <li>
               <a href="#jobs">Jobs</a>

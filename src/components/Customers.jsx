@@ -44,13 +44,13 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-center">
           {testimonialsData.map((item) => (
             <div
               key={item.id}
-              className={`bg-card-bg text-text-primary rounded-2xl p-6 text-left shadow-sm transition-all duration-300 ${
+              className={`bg-card-bg text-text-primary rounded-2xl p-6 text-left shadow-sm transition-all duration-300 w-full ${
                 item.isCenter
-                  ? "scale-105 border border-amber-900/10 shadow-md"
+                  ? "md:scale-105 border border-amber-900/10 shadow-md"
                   : "opacity-90"
               }`}
             >
